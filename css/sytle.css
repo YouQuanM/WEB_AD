@@ -1,0 +1,46 @@
+/*全部*/
+.comment-user{
+    margin-left: 3%;
+}
+li{
+    list-style-type: none;
+}
+.rating{
+    width: 200px;
+    height: 26px;
+    padding-left: 0;
+}
+.rating-item{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url(../images/star.png)no-repeat;
+    cursor: pointer;
+}
+.star-p{
+    display: inline;
+}
+.gudie{
+    padding:20px;
+    text-align: center;
+}
+.gundonglan{
+    text-align: center;
+}
+#jumbotron2{
+    margin: 10%;
+}
+#login1{
+    color: black;
+}
+#search{
+    float: right;
+}
+/*图片*/
+.media-object{
+    width: 128px;
+    height: 128px;
+}
+.media{
+    margin: 3%;
+}

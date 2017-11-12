@@ -18,6 +18,24 @@
         .comment-user{
             margin-left: 3%;
         }
+        li{
+            list-style-type: none;
+        }
+        .rating{
+            width: 200px;
+            height: 26px;
+            padding-left: 0;
+        }
+        .rating-item{
+            float: left;
+            width: 30px;
+            height: 30px;
+            background: url(images/star.png)no-repeat;
+            cursor: pointer;
+        }
+        .star-p{
+            display: inline;
+        }
     </style>
     <script>$('.carousel').carousel()</script>
 </head>
@@ -60,8 +78,40 @@
                     <p>jieshaojieshao</p>
                     <p>jieshaojieshao</p>
                     <p>jieshaojieshao</p>
-                    <p>jieshaojieshao</p>
-                    <p>jieshaojieshao</p>
+                    <div class="star">
+                        <h3 class="star-p">评分：</h3>
+                        <ul class="rating" id="rating">
+                            <li class="rating-item" title="很不好"></li>
+                            <li class="rating-item" title="不好"></li>
+                            <li class="rating-item" title="一般"></li>
+                            <li class="rating-item" title="好"></li>
+                            <li class="rating-item" title="很好"></li>
+                        </ul>
+                        <script>
+                            var num = 2;
+                            $rating = $('#rating')
+                            $item = $rating.find('.rating-item');
+                            var lightOn = function(num){
+                                $item.each(function (index) {
+                                    if(index < num){
+                                        $(this).css('background-position','0 -40px');
+                                    }else{
+                                        $(this).css('background-position','0 0');
+                                    }
+                                })
+                            };
+
+                            lightOn(num);
+                            $item.on('mouseover',function(){
+                                lightOn($(this).index()+1);
+                            }).on('click',function(){
+                                num = $(this).index()+1;
+                            })
+                            $rating.on('mouseout',function () {
+                                lightOn(num);
+                            })
+                        </script>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">

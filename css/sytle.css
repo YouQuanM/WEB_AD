@@ -1,4 +1,7 @@
 /*全部*/
+body{
+    padding-top: 70px;
+}
 .comment-user{
     margin-left: 3%;
 }

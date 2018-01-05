@@ -13,22 +13,105 @@
         <div class="heading_nav">
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <a class="navbar-brand" href="index.html">皮皮影视</a>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
+                        <!--这里放用户的名字和退出登录的选项-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户：XXX <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Modify.html">修改资料</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">退出登录</a></li>
+                            </ul>
+                        </li>
+                        <!--这里放用户的名字和退出登录的选项-->
                     </ul>
                 </div>
             </nav>
         </div>
-        <div class="media">
-            <div class="media-left">
-                <img class="media-object" src="pic1.jpeg" alt="用户1头像">
+        <!--这里是用户的详细信息，分成两栏，左右2：1，左边是详细信息，右边是用户的头像，生日，个性签名概览等（仿照豆瓣来的）-->
+        <div class="row">
+            <!--
+                这里是左侧，分别是用户的头像，昵称，个性签名
+                          下面是用户评论过的电影以及具体评论
+            -->
+            <div class="col-md-8">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <img class="media-object" src="pic1.jpeg" alt="用户XXX头像">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">用户XXX</h3>
+                        个性签名
+                    </div>
+                    <hr>
+                </div>
+                <div class="user-comment">
+                    <h3>XXX的评论：</h3>
+                    <!--这里是详细的评论，分别是电影海报，电影名称，和评论内容，豆瓣那个适合长篇幅的评论就简化了一下-->
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <!--这里是电影的图片，href的#改为电影的链接，可以直接跳转到该电影，如果不用这个功能就直接把a标签删掉也可以-->
+                            <a href="#" class="thumbnail">
+                                <img src="1.webp" alt="雷神">
+                            </a>
+                        </div>
+                        <div class="user-comment-detail">
+                            <h4>评论XXXXXXXXXXXXXXXXXXXXXXXX</h4>
+                            <br>
+                            <h4>
+                                电影名称
+                            </h4>
+                            <p class="movie-introduction">
+                                电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介
+                                电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介
+                                电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介
+                                电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介
+                            </p>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="2.webp" alt="雷神">
+                            </a>
+                        </div>
+                        <div class="user-comment-detail">
+                            <h4>评论XXXXXXXXXXXXXXXXXXXXXXXX</h4>
+                            <br>
+                            <h4>
+                                电影名称
+                            </h4>
+                            <p class="movie-introduction">
+                                电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介
+                                电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介
+                                电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介
+                                电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介电影简介
+                            </p>
+                        </div>
+                        <br>
+                    </div>
+                </div>
             </div>
-            <div class="media-body">
-                <h4 class="media-heading">用户1</h4>
-                个性签名
+            <!--这里是右侧的位置，是大头像，昵称，性别，生日，签名等个人信息-->
+            <div class="col-md-4">
+                <div class="user-right">
+                    <img class="user-right-img" src="pic1.jpeg" alt="...">
+                    <div class="user-details">
+                        <h3>用户XXX</h3>
+                        <p>上次登录时间：2017-12-27</p>
+                        <p>2017-12-01加入</p>
+                        <h4>四川成都</h4>
+                        <h4>1996-01-01</h4>
+                        <h4>性别：男</h4>
+                        <div>
+                            兴趣 兴趣 兴趣
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

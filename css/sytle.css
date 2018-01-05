@@ -2,6 +2,10 @@
 body{
     padding-top: 70px;
 }
+.bg-main{
+    background-color: #f5fff2;
+    border-radius: 5%;
+}
 .comment-user{
     margin-left: 3%;
 }
@@ -46,4 +50,86 @@ li{
 }
 .media{
     margin: 3%;
+}
+.user-right-img{
+    width: 150px;
+    height: 150px;
+}
+.movie-introduction{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.type-video-detail{
+    display: inline;
+}
+.movie-label-all{
+    background-color: aliceblue;
+    padding: 1%;
+    border-radius: 3%;
+    margin: 1%;
+}
+.movie-label{
+    margin: 1%;
+}
+.guess{
+    background-color: #e8e8e8;
+    padding: 1%;
+    border-radius: 2%;
+    margin: 1%;
+}
+#guess-img{
+    width: 80px;
+    height: 110px;
+}
+.guess-p{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.guess-div{
+
+}
+/*广告*/
+.ad {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    display: none;
+}
+
+
+.ad span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/close.jpeg);
+    cursor: pointer;
+}
+/*星级评分*/
+.rating{
+    width: 150px;
+    height: 26px;
+}
+.rating-item{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url(../images/star.png)no-repeat;
+    cursor: pointer;
+}
+.comment-mine{
+    display: inline;
+}
+#comment-submit{
+    margin-top: 1%;
 }

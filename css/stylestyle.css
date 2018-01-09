@@ -1,0 +1,269 @@
+/*全部*/
+.bg-main{
+    background-color: #f5fff2;
+    border-radius: 5%;
+}
+.heading_nav{
+    margin-bottom: 5%;
+}
+li{
+    list-style-type: none;
+}
+.comment-user{
+    margin-left: 3%;
+}
+.star-p{
+    display: inline;
+}
+.gudie{
+    padding:20px;
+    text-align: center;
+}
+.gundonglan{
+    text-align: center;
+}
+#jumbotron2{
+    margin: 10%;
+}
+#login1{
+    color: black;
+}
+#search{
+    float: right;
+}
+/*图片*/
+.media-object{
+    width: 128px;
+    height: 128px;
+}
+.media{
+    background-color: #f5fff2;
+    padding: 3%;
+}
+.user-comment{
+    background-color: #f5fff2;
+    padding: 3%;
+}
+.user-right-img{
+    width: 150px;
+    height: 150px;
+    padding: 3%;
+}
+.movie-introduction{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.type-video-detail{
+    display: inline;
+}
+.user-right{
+    border-radius: 3%;
+    background-color: aliceblue;
+}
+.user-details{
+    padding: 3%;
+}
+.movie-label-all{
+    background-color: aliceblue;
+    padding: 1%;
+    border-radius: 3%;
+    margin: 1%;
+}
+.movie-label{
+    margin: 1%;
+}
+.guess{
+    background-color:#e8e8e8;
+    padding: 1%;
+    border-radius: 2%;
+    margin: 1%;
+}
+#guess-img{
+    width: 80px;
+    height: 110px;
+}
+.guess-p{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.guess-div{
+
+}
+
+/*广告*/
+.ad {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    display: none;
+}
+
+.ad span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.profile-thumbnail {
+    position: absolute;
+}
+.profile-header {
+    min-height: 260px;
+    margin-left: 280px;
+}
+.comment-user{
+    margin-left: 3%;
+}
+div.pagination {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+ul.comments {
+    list-style-type: none;
+    padding: 0px;
+    margin: 16px 0px 0px 0px;
+}
+ul.comments li.comment {
+    margin-left: 32px;
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+ul.comments li.comment:nth-child(1) {
+    border-top: 1px solid #e0e0e0;
+}
+ul.comments li.comment:hover {
+    background-color: #f0f0f0;
+}
+div.comment-date {
+    float: right;
+}
+div.comment-author {
+    font-weight: bold;
+}
+div.comment-thumbnail {
+    position: absolute;
+}
+div.comment-content {
+    margin-left: 48px;
+    min-height: 48px;
+}
+div.comment-form {
+    margin: 16px 0px 16px 32px;
+}
+.grade{
+    margin-top: 10%;
+    color: blue;
+}
+.grade-gra{
+    display: inline;
+}
+.grade-num{
+    display: inline;
+}
+.type-video{
+    margin-top: 10%;
+}
+.type-video-detail{
+    display: inline;
+    padding-left: 1%;
+}
+.introduce{
+    margin-top: 10%;
+}
+label{
+    padding-right:1%
+}
+form{
+    margin-left:3%
+}
+.btn-nav{
+    padding-right: 2%;
+}
+#nav-submit{
+    display: inline;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+.list-video{
+    width: 100px;
+    height: 100px;
+}
+/*星级评分*/
+.rating{
+    width: 150px;
+    height: 26px;
+}
+.rating-item{
+    float: left;
+    width: 15px;
+    height: 15px;
+    background: url(../images/star.png)no-repeat;
+    cursor: pointer;
+}
+.rating-item1{
+    float: left;
+    width: 15px;
+    height: 15px;
+    background: url(../images/star.png)no-repeat;
+    cursor: pointer;
+}
+#comment-submit{
+    margin-top: 1%;
+}
+.grade-star{
+    display: inline;
+}
+.rating{
+    display: inline;
+}
+.grade-star p{
+    color: dodgerblue;
+    margin-left: 15%;
+    display: inline;
+}
+.grade-star p.fen{
+    display: inline;
+    margin-left: 0%;
+}
+p.fen-mine{
+    display: inline;
+}
+p.grade-mine{
+    display: inline;
+}
+h4.pingfen-mine{
+    display: inline;
+}
+/*广告页*/
+.user-ad-all{
+    background-color: lightgray;
+    border-radius: 3%;
+}
+.user-ad{
+    padding: 3%;
+}
+.user-ad-img{
+    width: 200px;
+    height: 200px;
+}

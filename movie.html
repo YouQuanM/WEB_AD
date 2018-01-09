@@ -6,13 +6,14 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="css/sytle.css">
+    <link rel="stylesheet" href="css/stylestyle.css">
     <script src="js/ad.js"></script>
     <style>
         .ad{
             background-image: url("images/1.jpeg");
         }
     </style>
+
 </head>
 <body>
 <div class="container">
@@ -203,99 +204,75 @@
     <div class="row">
         <div class="col-md-8">
             <div class="comment-mine-all">
-                <h3>您的评论：</h3>
-                <ul class="rating" id="rating">
-                    <li class="rating-item" title="很不好"></li>
-                    <li class="rating-item" title="不好"></li>
-                    <li class="rating-item" title="一般"></li>
-                    <li class="rating-item" title="好"></li>
-                    <li class="rating-item" title="很好"></li>
-                </ul>
+                <!--<h3>您的评论：</h3>-->
+                <!--<div class="grade-star">-->
+                    <!--<ul class="rating" id="rating">-->
+                        <!--<li class="rating-item" title="很不好"></li>-->
+                        <!--<li class="rating-item" title="不好"></li>-->
+                        <!--<li class="rating-item" title="一般"></li>-->
+                        <!--<li class="rating-item" title="好"></li>-->
+                        <!--<li class="rating-item" title="很好"></li>-->
+                    <!--</ul>-->
+                    <!--<p id="user-grade-mine">6&lt;!&ndash;这里加一个个人的评分，我先随便给个分树&ndash;&gt;</p><p class="fen">分</p>-->
+                    <!--<script>var j = $("#user-grade-mine").text();</script>-->
+                    <!--<script src="js/star.js"></script>-->
+                    <!--<h5 class="comment-mine">评论评论评论评论</h5>-->
+                <!--</div>-->
+                <!--&lt;!&ndash;这里是他评论的内容&ndash;&gt;-->
 
-                <p class="comment-mine">评论评论评论评论</p>
-                <!--这里是他评论的内容-->
-
-                <script>
-                              ////////////
-                    var j = 6;//这里是他的评分,先随便给个值
-                              ////////////
-                    if (j<=2){
-                        num = 1;
-                    } else if (j>2&&j<=4){
-                        num = 2;
-                    } else if (j>4&&j<=6){
-                        num = 3;
-                    } else if (j>6&&j<=8){
-                        num = 4;
-                    } else if (j>8){
-                        num = 5;
-                    }
-                    $rating = $('#rating')
-                    $item = $rating.find('.rating-item');
-                    var lightOn = function(num){
-                        $item.each(function (index) {
-                            if(index < num){
-                                $(this).css('background-position','0 -40px');
-                            }else{
-                                $(this).css('background-position','0 0');
-                            }
-                        })
-                    };
-                    lightOn(num);
-                </script>
 
 <!--从这里开始是没有评论的情况下：-->
-                <!--<h3>请您点评：</h3>-->
-                <!--<ul class="rating" id="rating">-->
-                    <!--<li class="rating-item" title="很不好"></li>-->
-                    <!--<li class="rating-item" title="不好"></li>-->
-                    <!--<li class="rating-item" title="一般"></li>-->
-                    <!--<li class="rating-item" title="好"></li>-->
-                    <!--<li class="rating-item" title="很好"></li>-->
-                <!--</ul>-->
-                <!--<input id="comment-text" type="text" class="form-control" placeholder="Text input">-->
-                <!--<button id="comment-submit" type="button" class="btn btn-success">提交</button>-->
-                <!--<script>-->
-                    <!--var num = 2;-->
-                    <!--$rating = $('#rating')-->
-                    <!--$item = $rating.find('.rating-item');-->
-                    <!--var lightOn = function(num){-->
-                        <!--$item.each(function (index) {-->
-                            <!--if(index < num){-->
-                                <!--$(this).css('background-position','0 -40px');-->
-                            <!--}else{-->
-                                <!--$(this).css('background-position','0 0');-->
-                            <!--}-->
-                        <!--})-->
-                    <!--};-->
-                    <!--lightOn(num);-->
-                    <!--$item.on('mouseover',function(){-->
-                        <!--lightOn($(this).index()+1);-->
-                    <!--}).on('click',function(){-->
-                        <!--num = $(this).index()+1;-->
-                        <!--var grade = num;-->
-                        <!--/////////////////////-->
-                        <!--//每次点击星星后会吧num赋值给grade，就是用户的评分。-->
-                        <!--//可以在这里直接把grade传入数据库吧。。。-->
-                        <!--/////////////////////-->
-
-                    <!--})-->
-                    <!--$rating.on('mouseout',function () {-->
-                        <!--lightOn(num);-->
-                    <!--});-->
-                    <!--//获取input的文本。-->
-                    <!--$(document).ready(function(){-->
-                        <!--$("#comment-submit").click(function(){-->
-                            <!--var t = $(" #comment-text ").val();-->
-                            <!--/////////////////////-->
-                            <!--//t被赋值为input里的内容。-->
-                            <!--/////////////////////-->
-
-                            <!--alert(t)//测试,可以删掉//-->
-                        <!--});-->
-                    <!--});-->
-                <!--</script>-->
+                <h3>请您点评：</h3>
+                <ul class="rating" id="rating-mine">
+                    <li class="rating-item1" title="很不好"></li>
+                    <li class="rating-item1" title="不好"></li>
+                    <li class="rating-item1" title="一般"></li>
+                    <li class="rating-item1" title="好"></li>
+                    <li class="rating-item1" title="很好"></li>
+                </ul>
+                <input id="comment-text" type="text" class="form-control" placeholder="Text input">
+                <button id="comment-submit" type="button" class="btn btn-success">提交</button>
                 <hr>
+               <script>
+                   var num = 4;
+                   $rating = $('#rating-mine');
+                   $item = $rating.find('.rating-item1');
+                   var lightOn = function(num){
+                       $item.each(function (index) {
+                           if(index < num){
+                               $(this).css('background-position','0 -20px');
+                           }else{
+                               $(this).css('background-position','0 0');
+                           }
+                       })
+                   };
+                   lightOn(num);
+                   $item.on('mouseover',function(){
+                       lightOn($(this).index()+1);
+                   }).on('click',function(){
+                       num = $(this).index()+1;
+                       var grade = num*2;//注意：这里传值是按照5分制传的，评分是十分的话就把num乘以2//
+                       /////////////////////
+                       //每次点击星星后会吧num赋值给grade，就是用户的评分。
+                       //可以在这里直接把grade传入数据库吧。。。
+                       /////////////////////
+                       alert(grade);//测试用，可以删掉。//
+                   });
+                   $rating.on('mouseout',function () {
+                       lightOn(num);
+                   });
+                   //获取input的文本。
+                   $(document).ready(function(){
+                       $("#comment-submit").click(function(){
+                           var t = $(" #comment-text ").val();
+                           /////////////////////
+                           //t被赋值为input里的内容。
+                           /////////////////////
+
+                           alert(t)//测试,可以删掉//
+                       });
+                   });
+               </script>
             </div>
 
 
@@ -311,71 +288,135 @@
                     <div class="comment-content">
                         <div class="comment-date"><span class="" data-timestamp="2017-09-29T15:44:48Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">3 months ago</span></div>
                         <div class="comment-author"><a href="/user/amanda73">amanda73</a></div>
+                        <!--星级评分的代码，直接复制就可以，把这一段放到第一条评论中，里面传个评分就可以了，后面的就分别放到2345条评论里-->
+                        <!--星级评分的代码，直接复制就可以，把这一段放到第一条评论中，里面传个评分就可以了，后面的就分别放到2345条评论里-->
+                        <div class="grade-star">
+                            <ul class="rating" id="rating1">
+                                <li class="rating-item" title="很不好"></li>
+                                <li class="rating-item" title="不好"></li>
+                                <li class="rating-item" title="一般"></li>
+                                <li class="rating-item" title="好"></li>
+                                <li class="rating-item" title="很好"></li>
+                            </ul>
+                            <p id="user-grade1">8<!--这里加一个个人的评分，我先随便给个分数--></p><p class="fen">分</p>
+                        </div>
+                        <script>var k = $("#user-grade1").text();</script>
+                        <script src="js/star-comment1.js"></script>
+                        <!--星级评分的代码，直接复制就可以，把这一段放到第一条评论中，里面传个评分就可以了，后面的就分别放到2345条评论里-->
+                        <!--星级评分的代码，直接复制就可以，把这一段放到第一条评论中，里面传个评分就可以了，后面的就分别放到2345条评论里-->
+                        <div class="comment-body">
+                            故事内核和《还珠格格》一模一样！男紫薇和女尔康面临原生家庭危机，皇阿玛竟是传播毒精子的走婚族，尔泰妹妹一个拥抱破除童年阴影。宇宙第一法则：红尘做伴，活得潇潇洒洒。（这个让人想睡的亚裔丫鬟？可不就是金锁！！
+                        </div>
+                    </div>
+                </li>
+                <li class="comment">
+                    <div class="comment-thumbnail">
+                        <a href="/user/amanda73">
+                            <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/b56f37cb58b06ec923bbaabb03e095a5?s=40&amp;d=identicon&amp;r=g">
+                        </a>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-date"><span class="" data-timestamp="2017-09-29T15:44:48Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">3 months ago</span></div>
+                        <div class="comment-author"><a href="/user/amanda73">amanda73</a></div>
+                        <div class="grade-star">
+                            <ul class="rating" id="rating2">
+                                <li class="rating-item" title="很不好"></li>
+                                <li class="rating-item" title="不好"></li>
+                                <li class="rating-item" title="一般"></li>
+                                <li class="rating-item" title="好"></li>
+                                <li class="rating-item" title="很好"></li>
+                            </ul>
+                            <p id="user-grade2">2<!--这里加一个个人的评分，我先随便给个分树--></p><p class="fen">分</p>
+                        </div>
+
+                        <script>var l = $("#user-grade2").text();</script>
+                        <script src="js/star-comment2.js"></script>
+                        <div class="comment-body">
+                            故事内核和《还珠格格》一模一样！男紫薇和女尔康面临原生家庭危机，皇阿玛竟是传播毒精子的走婚族，尔泰妹妹一个拥抱破除童年阴影。宇宙第一法则：红尘做伴，活得潇潇洒洒。（这个让人想睡的亚裔丫鬟？可不就是金锁！！
+                        </div>
+                    </div>
+                </li>
+                <li class="comment">
+                    <div class="comment-thumbnail">
+                        <a href="/user/amanda73">
+                            <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/b56f37cb58b06ec923bbaabb03e095a5?s=40&amp;d=identicon&amp;r=g">
+                        </a>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-date"><span class="" data-timestamp="2017-09-29T15:44:48Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">3 months ago</span></div>
+                        <div class="comment-author"><a href="/user/amanda73">amanda73</a></div>
+                        <div class="grade-star">
+                            <ul class="rating" id="rating3">
+                                <li class="rating-item" title="很不好"></li>
+                                <li class="rating-item" title="不好"></li>
+                                <li class="rating-item" title="一般"></li>
+                                <li class="rating-item" title="好"></li>
+                                <li class="rating-item" title="很好"></li>
+                            </ul>
+                            <p id="user-grade3">5<!--这里加一个个人的评分，我先随便给个分树--></p><p class="fen">分</p>
+                        </div>
+                        <script>var m = $("#user-grade3").text();</script>
+                        <script src="js/star-comment3.js"></script>
+                        <div class="comment-body">
+                            故事内核和《还珠格格》一模一样！男紫薇和女尔康面临原生家庭危机，皇阿玛竟是传播毒精子的走婚族，尔泰妹妹一个拥抱破除童年阴影。宇宙第一法则：红尘做伴，活得潇潇洒洒。（这个让人想睡的亚裔丫鬟？可不就是金锁！！
+                        </div>
+                    </div>
+                </li>
+                <li class="comment">
+                    <div class="comment-thumbnail">
+                        <a href="/user/amanda73">
+                            <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/b56f37cb58b06ec923bbaabb03e095a5?s=40&amp;d=identicon&amp;r=g">
+                        </a>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-date"><span class="" data-timestamp="2017-09-29T15:44:48Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">3 months ago</span></div>
+                        <div class="comment-author"><a href="/user/amanda73">amanda73</a></div>
+                        <div class="grade-star">
+                            <ul class="rating" id="rating4">
+                                <li class="rating-item" title="很不好"></li>
+                                <li class="rating-item" title="不好"></li>
+                                <li class="rating-item" title="一般"></li>
+                                <li class="rating-item" title="好"></li>
+                                <li class="rating-item" title="很好"></li>
+                            </ul>
+                            <p id="user-grade4">8<!--这里加一个个人的评分，我先随便给个分树--></p><p class="fen">分</p>
+                        </div>
+                        <script>var n = $("#user-grade4").text();</script>
+                        <script src="js/star-comment4.js"></script>
+                        <div class="comment-body">
+                            故事内核和《还珠格格》一模一样！男紫薇和女尔康面临原生家庭危机，皇阿玛竟是传播毒精子的走婚族，尔泰妹妹一个拥抱破除童年阴影。宇宙第一法则：红尘做伴，活得潇潇洒洒。（这个让人想睡的亚裔丫鬟？可不就是金锁！！
+                        </div>
+                    </div>
+                </li>
+                <li class="comment">
+                    <div class="comment-thumbnail">
+                        <a href="/user/amanda73">
+                            <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/b56f37cb58b06ec923bbaabb03e095a5?s=40&amp;d=identicon&amp;r=g">
+                        </a>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-date"><span class="" data-timestamp="2017-09-29T15:44:48Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">3 months ago</span></div>
+                        <div class="comment-author"><a href="/user/amanda73">amanda73</a></div>
+                        <div class="grade-star">
+                            <ul class="rating" id="rating5">
+                                <li class="rating-item" title="很不好"></li>
+                                <li class="rating-item" title="不好"></li>
+                                <li class="rating-item" title="一般"></li>
+                                <li class="rating-item" title="好"></li>
+                                <li class="rating-item" title="很好"></li>
+                            </ul>
+                            <p id="user-grade5">6<!--这里加一个个人的评分，我先随便给个分树--></p><p class="fen">分</p>
+                        </div>
+                        <script>var p = $("#user-grade5").text();</script>
+                        <script src="js/star-comment5.js"></script>
                         <div class="comment-body">
                             故事内核和《还珠格格》一模一样！男紫薇和女尔康面临原生家庭危机，皇阿玛竟是传播毒精子的走婚族，尔泰妹妹一个拥抱破除童年阴影。宇宙第一法则：红尘做伴，活得潇潇洒洒。（这个让人想睡的亚裔丫鬟？可不就是金锁！！
                         </div>
                     </div>
                 </li>
 
-                <li class="comment">
-                    <div class="comment-thumbnail">
-                        <a href="/user/sandra75">
-                            <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/665d442a8ab81542cc0d2388b8df4378?s=40&amp;d=identicon&amp;r=g">
-                        </a>
-                    </div>
-                    <div class="comment-content">
-                        <div class="comment-date"><span class="" data-timestamp="2017-02-04T02:57:03Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">a year ago</span></div>
-                        <div class="comment-author"><a href="/user/sandra75">sandra75</a></div>
-                        <div class="comment-body">
-                            生父好、还是养父好？千古谜题终于有了答案。依然是经典老歌串烧，那首“Father and Son”真是唱到我心坎儿里去了。好笑、好玩、好煽，结尾彩蛋X5。#I am Groot#
-                        </div>
-                    </div>
-                </li>
 
-                <li class="comment">
-                    <div class="comment-thumbnail">
-                        <a href="/user/karen67">
-                            <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/b27b647ccc6bf527557cac4fe6729d51?s=40&amp;d=identicon&amp;r=g">
-                        </a>
-                    </div>
-                    <div class="comment-content">
-                        <div class="comment-date"><span class="" data-timestamp="2017-05-14T08:55:32Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">8 months ago</span></div>
-                        <div class="comment-author"><a href="/user/karen67">karen67</a></div>
-                        <div class="comment-body">
-                            本来以为正片就够尴尬了，没想到五个彩蛋更是尴尬到顶点
-                        </div>
-                    </div>
-                </li>
 
-                <li class="comment">
-                    <div class="comment-thumbnail">
-                        <a href="/user/christina69">
-                            <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/56dc8a92fd8a47d7dfd2c65400c5efec?s=40&amp;d=identicon&amp;r=g">
-                        </a>
-                    </div>
-                    <div class="comment-content">
-                        <div class="comment-date"><span class="" data-timestamp="2017-09-24T11:13:08Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">3 months ago</span></div>
-                        <div class="comment-author"><a href="/user/christina69">christina69</a></div>
-                        <div class="comment-body">
-                            “跟养父相比，亲爹是个球。”
-                        </div>
-                    </div>
-                </li>
-
-                <li class="comment">
-                    <div class="comment-thumbnail">
-                        <a href="/user/christopher91">
-                            <img class="img-rounded profile-thumbnail" src="http://www.gravatar.com/avatar/9f2af6ea92fe412e9150a89779b050c1?s=40&amp;d=identicon&amp;r=g">
-                        </a>
-                    </div>
-                    <div class="comment-content">
-                        <div class="comment-date"><span class="" data-timestamp="2017-07-26T16:07:26Z" data-format="fromNow(0)" data-refresh="0" style="display: inline;">5 months ago</span></div>
-                        <div class="comment-author"><a href="/user/christopher91">christopher91</a></div>
-                        <div class="comment-body">
-                            萌点与泪点齐飞，荡气共柔肠一色。
-                        </div>
-                    </div>
-                </li>
 
             </ul>
         </div>
